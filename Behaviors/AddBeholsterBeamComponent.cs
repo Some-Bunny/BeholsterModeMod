@@ -101,6 +101,7 @@ namespace BeholsterMode
 				beamSelection = ShootBeamBehavior.BeamSelection.All,
 				//UsesBaseSounds = false,
 				DefualtDirection = true,
+				
 				//BulletScript = new CustomBulletScriptSelector(typeof(Wailer.Wail)),
 			};
 

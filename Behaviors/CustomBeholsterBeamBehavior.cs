@@ -20,7 +20,30 @@ public class CustomBeholsterLaserBehavior : BasicAttackBehavior
 				this.m_laserBeam.DestroyBeam();
 				this.m_laserBeam = null;
 			}
+			for (int i = 0; i < this.m_currentBeamShooters.Count; i++)
+			{
+
+				AIBeamShooter2 aibeamShooter2 = this.m_currentBeamShooters[i];
+				if (aibeamShooter2 != null)
+				{
+					BasicBeamController bea = aibeamShooter2.GetComponent<BasicBeamController>();
+					bea.DestroyBeam();
+				}
+			}
 		};
+		if (this.m_aiActor == null)
+        {
+			for (int i = 0; i < this.m_currentBeamShooters.Count; i++)
+			{
+				
+				AIBeamShooter2 aibeamShooter2 = this.m_currentBeamShooters[i];
+				if (aibeamShooter2 != null)
+                {
+					BasicBeamController bea = aibeamShooter2.GetComponent<BasicBeamController>();
+					bea.DestroyBeam();
+				}
+			}
+		}
 	}
 	private bool ShowSpecificBeamShooter()
 	{

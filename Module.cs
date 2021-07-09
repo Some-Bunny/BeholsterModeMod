@@ -42,7 +42,10 @@ namespace BeholsterMode
             orig(self);
             try
             {
-                self.gameObject.AddComponent<AddBeholsterBeamComponent>();
+                if (self.IsHarmlessEnemy != true)
+                {
+                    self.gameObject.AddComponent<AddBeholsterBeamComponent>();
+                }
             }
             catch
             {
